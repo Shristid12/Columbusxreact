@@ -1,0 +1,45 @@
+.Nav-imageBar{
+  display: flex;
+  margin-left:8%;
+}
+.Nav-logo{
+  padding:2px;
+  padding-left: 2%;
+  padding-right: 2%;
+  background: black;
+  color:white;
+  font-weight: normal;
+}
+.Nav-Icons{
+  margin-top:30px;
+  height: 30px;
+  width:30px;
+  padding-left: 2%;
+}
+.Nav-Search{
+  margin-top: 20px;
+  margin-left: 2%;
+  width:55%;
+  text-align: left;
+}
+.Nav-SearchArea{
+   height: 28px;
+   width: 60%;
+   padding-left: 2%;
+}
+.Nav-ContentBar{
+  display: flex;
+  background: #f2f2f2;
+  height:30px;
+  border-top: 1px solid #C0C0C0;
+  border-bottom: 1px solid #C0C0C0;
+}
+.Nav-menuItem{
+   margin-top:2px;
+   padding-left: 2%;
+   padding-right: 2%;
+}
+.Nav-menuItemOne{
+   margin-top:2px;
+   padding-left: 8%;
+}

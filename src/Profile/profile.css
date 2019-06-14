@@ -1,0 +1,70 @@
+.Profile-Disabled-Button{
+  color: #f2f2f2;
+  border-radius: 4px;
+  height:30px;
+  width: 12%;
+  margin-left: auto;
+}
+.Profile-SelectMenuOne{
+  height:30px;
+  padding-left: 2%;
+}
+.Profile-Sectiontwo{
+  width:80%;
+}
+.Profile-FileSelect{
+  width:15%;
+  height:120px;
+  background: #f2f2f2;
+  margin-right: 4%;
+}
+.Profile-TextField{
+  border:none;
+  width: 100%;
+  height: auto;
+}
+.Profile-FileInput{
+  width:100%;
+  height:120px;
+  opacity:0;
+}
+.Profile-SelectImage{
+  display: flex;
+}
+.Profile-TextFieldButton{
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  border:1px solid black;
+  height:30px;
+  margin-left:auto;
+  width:14% ;
+}
+.Profile-SelectMenuTwo{
+  width:52%;
+  height:30px;
+  padding-left: 2%;
+}
+.Profile-OrganisationText{
+  width:53%;
+  padding-left: 1%;
+  border-radius: 4px;
+  border: 1px solid grey;
+  height:35px;
+}
+.Profile-TextSelect{
+  border: 1px solid grey;
+}
+.Profile-Information{
+  margin-top: 2%;
+  display: flex;
+}
+.Profile-EducationalInfo{
+  margin-left: 2%;
+}
+.Profile-ImageInstitute{
+  margin-top: 2%;
+}
+.Profile-InputForm{
+  margin-left: auto;
+}

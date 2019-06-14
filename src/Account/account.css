@@ -1,0 +1,126 @@
+
+.Basic{
+  display: flex;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 2%;
+  text-align: left;
+  font-size: 0.8em;
+}
+.Menu{
+  width:17%;
+}
+hr{
+  margin-bottom: 4%;
+  margin-top: 4%;
+  color: #c0c0c0;
+}
+.Display-none{
+  display: none;
+}
+.Content{
+  border:1px solid #C0C0C0;
+  box-shadow: 0px 0px 4px 0px #c0c0c0;
+  width:64%;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 1%;
+  padding-bottom: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 3%;
+}
+.Grey-Text{
+  color:#c0c0c0;
+}
+.Profile-Input{
+  display: flex;
+}
+.Button{
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  border:1px solid black;
+  height:30px;
+  width: 12%;
+  margin-left: auto;
+}
+.Profile-ImageInstitute{
+  width:40px;
+  height:40px;
+  background-color: #c0c0c0;
+  border-radius: 40px;
+}
+.Button-TypeTwo{
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  border:1px solid black;
+  margin-top: 6%;
+  height:20px;
+  width: 32%;
+  margin-left: auto;
+}
+.Account-Select{
+  margin-right: 3%;
+  width: 25%;
+}
+.Account-SelectLabel{
+   display: flex;
+}
+.Grey-TextTwo{
+  color:#c0c0c0;
+  margin-left: 18%;
+}
+.Profile-SelectMenu{
+  padding-bottom: 3%;
+}
+.Profile-Text{
+   display: flex;
+}
+.Profile-TextSelect{
+  margin-left: 8%;
+  padding-left: 2%;
+  height:40px;
+  border-radius: 4px;
+  border:1px solid black;
+  width:50%;
+}
+.Account-Notification-RowOne{
+  display: flex;
+}
+.Account-Notification-RowTwo{
+  width:31%;
+  margin-right: 2%;
+}
+.Account-Notification-RowThree{
+  width:31%;
+  margin-right: 2%;
+  text-align: right;
+}
+.Account-Popup-ButtonTwo{
+  margin-right: 2%;
+  background: white;
+  border-radius: 4px;
+  border:1px solid black;
+  margin-top: 6%;
+  height:30px;
+  width: 40%;
+  margin-left: auto;
+}
+.Account-Popup-Button{
+  background: black;
+  color:white;
+  border-radius: 4px;
+  border:1px solid black;
+  margin-top: 6%;
+  height:30px;
+  width: 40%;
+  margin-left: auto;
+}
+.Account-Popup{
+  display: flex;
+}
+.Account-Popup-Cross{
+  margin-left: auto;
+}

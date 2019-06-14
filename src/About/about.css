@@ -1,0 +1,32 @@
+.About-text{
+  display: flex;
+}
+.About-Navigation-Menu{
+  width:12%;
+}
+.About-Selector-Two{
+  margin-left: auto;
+  margin-right: 4%;
+}
+.About-Selector-One{
+  width:61%;
+}
+.About-section{
+  width:50%;
+  margin-top: 8%;
+}
+.About-UpdateDate{
+  color:#696969;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.About-Image-One{
+  margin-left: 2%;
+  width:98%;
+  height:110%;
+}
+.About-Image-Two{
+  margin-right: 10%;
+  width:90%;
+  height:110%;
+}
