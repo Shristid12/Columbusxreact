@@ -12,7 +12,6 @@ const Routes =(props)=> {
                     <Route  path='/profile'  exact component = {Profile}/>
                     <Route  path='/' exact component = {Home}/>
                     <Route  path='/about' exact component = {About}/>
-                    <Route  path='/popup' exact component = {Popup}/>
                 </Switch>
         )
 

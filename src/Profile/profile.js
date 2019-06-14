@@ -164,10 +164,10 @@ function Profile() {
                  </InputLabel>
                  <Select
                     native
-                    value={state.option}
-                    onChange={handleChange('option')}
+                    value={state.option3}
+                    onChange={handleChange('option3')}
                     input={
-                      <OutlinedInput name="option" labelWidth={labelWidth} id="outlined-age-native-simple" />
+                      <OutlinedInput name="option3" labelWidth={labelWidth} id="outlined-age-native-simple" />
                     }
                  >
                   <option value={0}></option>
@@ -202,10 +202,10 @@ function Profile() {
                   </InputLabel>
                   <Select
                      native
-                     value={state.option}
-                     onChange={handleChange('option')}
+                     value={state.option1}
+                     onChange={handleChange('option1')}
                      input={
-                       <OutlinedInput name="option" labelWidth={labelWidth} id="outlined-age-native-simple" />
+                       <OutlinedInput name="option1" labelWidth={labelWidth} id="outlined-age-native-simple" />
                      }
                   >
                     <option value={0}></option>
@@ -231,10 +231,10 @@ function Profile() {
                   </InputLabel>
                   <Select
                      native
-                     value={state.option}
-                     onChange={handleChange('option')}
+                     value={state.option2}
+                     onChange={handleChange('option2')}
                      input={
-                       <OutlinedInput name="option" labelWidth={labelWidth} id="outlined-age-native-simple" />
+                       <OutlinedInput name="option2" labelWidth={labelWidth} id="outlined-age-native-simple" />
                      }
                   >
                    <option value={0}></option>

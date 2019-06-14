@@ -1,4 +1,5 @@
 import React from 'react';
+import{Link} from 'react-router-dom';
 import './home.css';
 
 function Home(props){
@@ -10,7 +11,7 @@ function Home(props){
        <span class="Home-Resend">Resend</span></p>
      </div>
      <div class="Home-Skip">
-       <input class="Home-Skip-Button" type="submit" value="Skip for now"></input>
+       <Link to='/account'><input class="Home-Skip-Button" type="submit" value="Skip for now"></input></Link>
        <p>New to ColumbusX? Watch the <span class="Home-Tutorial">Tutorial</span></p>
      </div>
     </div>

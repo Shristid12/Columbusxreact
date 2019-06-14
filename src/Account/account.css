@@ -64,6 +64,7 @@ hr{
 .Account-Select{
   margin-right: 3%;
   width: 25%;
+  height:30px;
 }
 .Account-SelectLabel{
    display: flex;
