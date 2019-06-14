@@ -27,7 +27,7 @@ function Nav() {
            <p class="Nav-menuItemOne">My Page</p>
            <p class="Nav-menuItem">My Value Chain</p>
            <p class="Nav-menuItem">Legal Page</p>
-           <Link to='/about' style={{ textDecoration: 'none',color:'black',width:'10%' }}><p class="Nav-menuItem">About Us</p></Link>
+           <Link to='/about' style={{ textDecoration: 'none',color:'black',width:'100%' }}><p class="Nav-menuItem">About Us</p></Link>
         </div>
     </div>
   );
