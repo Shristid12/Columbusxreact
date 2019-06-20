@@ -1,0 +1,24 @@
+.Payment-SavedCards{
+  display:flex;
+  margin-top: 2%;
+}
+.payment_image{
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid grey;
+}
+.Grey-Text-2{
+  color: grey;
+}
+.payment{
+  display: flex;
+  width: 100%;
+}
+.payment_checkbox{
+  width:7%;
+  margin-right: 2%;
+  margin-top: 3%;
+}
+.payment_info{
+  width:90%;
+}

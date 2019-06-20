@@ -125,3 +125,9 @@ hr{
 .Account-Popup-Cross{
   margin-left: auto;
 }
+.SidemenuNotClicked{
+  font-weight: bold;
+}
+.Clicked{
+  font-weight: normal;
+}

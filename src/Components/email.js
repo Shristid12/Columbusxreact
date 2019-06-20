@@ -1,5 +1,5 @@
 import React from 'react';
-import './email.css';
+import '../Styles/email.css';
 
 function Email(props){
   return (
@@ -10,7 +10,7 @@ function Email(props){
           <h3 onClick={props.onCloseModdal} class="Account-Popup-Cross">x</h3>
         </div>
         <p>Do you want to remove this email address?</p>
-        <p class="iyyy">abcd @ mckinleyrice.com</p>
+        <p class="Grey-Text">abcd @ mckinleyrice.com</p>
         <div class="uhhh">
           <input onClick={props.onCloseModdal} class="Account-Popup-ButtonTwo" type="submit" value="Cancel"></input>
           <input onClick={props.onChangeCl} class="Account-Popup-Button" type="submit" value="Remove"></input>

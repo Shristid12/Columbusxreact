@@ -1,5 +1,5 @@
 import React from 'react';
-import './profile.css';
+import '../Styles/profile.css';
 import { createMuiTheme, withStyles, makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Popup from 'reactjs-popup';
@@ -12,10 +12,11 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import NativeSelect from '@material-ui/core/NativeSelect';
-import Inp from'./inp.js';
-import Name from'./name.js';
+import Inp from'../Components/inp.js';
+import Name from'../Components/name.js';
 import {Link} from 'react-router-dom';
-import Nav from '../Navigation/nav.js';
+import Nav from '../Components/nav.js';
+import Sidemenu from'../Components/SideMenu.js';
 
 const AddButton = withStyles({
   root: {
@@ -34,6 +35,14 @@ const useStyles = makeStyles(theme => ({
     minWidth: 120,
     maxHeight: 30,
   },
+  selectControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+    maxHeight: 30,
+  },
+  ButtonControl: {
+    maxHeight: 12,
+  },
   selectEmpty: {
     marginTop: theme.spacing(2),
     height: 40,
@@ -43,10 +52,12 @@ const contentStyle = {
    width: "15%",
    padding: "1%"
  };
+
 function Profile() {
   const classes = useStyles();
   const [state, setState] = React.useState({
     option: '',
+    optionSideMenu:'2',
     name: 'hai',
     open1: false,
   });
@@ -80,11 +91,7 @@ function Profile() {
       <Nav/>
       <div class="Basic">
          <div class="Menu">
-             <p><Link to='/account' style={{ textDecoration: 'none',color:'black' }}><p>Account Setting</p></Link></p>
-             <h3>Profile Setting</h3>
-             <p>Payment Settings</p>
-             <p>My Transactions</p>
-             <p>Privacy Setting</p>
+            <Sidemenu option={state.optionSideMenu}/>
          </div>
          <div class="Content">
             <h3>Profile Picture and Name</h3>
@@ -160,17 +167,17 @@ function Profile() {
                  <div class="Profile-InputForm">
              <FormControl variant="outlined" className={classes.formControl}>
                  <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
-                    Option
                  </InputLabel>
                  <Select
                     native
                     value={state.option3}
+                    className={classes.selectControl}
                     onChange={handleChange('option3')}
                     input={
                       <OutlinedInput name="option3" labelWidth={labelWidth} id="outlined-age-native-simple" />
                     }
                  >
-                  <option value={0}></option>
+                  <option value={0}>Options</option>
                   <option value={10}>Delete</option>
                   <option value={20}>Edit</option>
                  </Select>
@@ -198,17 +205,17 @@ function Profile() {
                   <div class="Profile-InputForm">
               <FormControl variant="outlined" className={classes.formControl}>
                   <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
-                     Options
                   </InputLabel>
                   <Select
                      native
+                     className={classes.selectControl}
                      value={state.option1}
                      onChange={handleChange('option1')}
                      input={
                        <OutlinedInput name="option1" labelWidth={labelWidth} id="outlined-age-native-simple" />
                      }
                   >
-                    <option value={0}></option>
+                    <option value={0}>Options</option>
                     <option value={10}>Delete</option>
                     <option value={20}>Edit</option>
                   </Select>
@@ -227,17 +234,17 @@ function Profile() {
                   <div class="Profile-InputForm">
               <FormControl variant="outlined" className={classes.formControl}>
                   <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
-                     Options
                   </InputLabel>
                   <Select
                      native
+                     className={classes.selectControl}
                      value={state.option2}
                      onChange={handleChange('option2')}
                      input={
                        <OutlinedInput name="option2" labelWidth={labelWidth} id="outlined-age-native-simple" />
                      }
                   >
-                   <option value={0}></option>
+                   <option value={0}>Options</option>
                    <option value={10}>Delete</option>
                    <option value={20}>Edit</option>
                   </Select>
@@ -256,23 +263,23 @@ function Profile() {
              <div>
              <AddButton size="small" variant="outlined" color="disabled">
                   Facebook
-                 <AddIcon/>
+                 <AddIcon className={classes.ButtonControl}/>
              </AddButton>
              <AddButton size="small" variant="outlined" color="disabled">
                   Linkedin
-                 <AddIcon/>
+                 <AddIcon className={classes.ButtonControl}/>
              </AddButton>
              <AddButton size="small" variant="outlined" color="disabled">
                   Vimeo
-                 <AddIcon/>
+                 <AddIcon className={classes.ButtonControl}/>
              </AddButton>
              <AddButton size="small"  variant="outlined" color="disabled">
                   Behance
-                 <AddIcon/>
+                 <AddIcon className={classes.ButtonControl}/>
              </AddButton>
              <AddButton size="small"  variant="outlined" color="disabled">
                   GitHub
-                 <AddIcon/>
+                 <AddIcon className={classes.ButtonControl}/>
              </AddButton>
              </div>
          </div>

@@ -1,27 +1,41 @@
 import React,{Component} from 'react';
-import './account.css';
+import '../Styles/account.css';
 import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
 import Popup from 'reactjs-popup';
-import Password from './password.js';
-import Email from './email.js';
-import Address from './address.js';
+import Password from '../Components/password.js';
+import Email from '../Components/email.js';
+import Address from '../Components/address.js';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import Nav from '../Navigation/nav.js';
+import Nav from '../Components/nav.js';
 import {Link} from 'react-router-dom';
+import POPUP from '../Components/popup.js';
+import Sidemenu from'../Components/SideMenu.js';
 
 class Account extends Component {
   constructor (props) {
     super(props);
-    this.state = { country: '', region: '' ,open1: false ,open2: false,open3: false,cl: true,cl1: true,cl2:true};
-    this.openModal1 = this.openModal1.bind(this)
-    this.closeModal1 = this.closeModal1.bind(this)
-    this.openModal2 = this.openModal2.bind(this)
-    this.closeModal2 = this.closeModal2.bind(this)
+    this.state = { country: '',
+                  region: '' ,
+                  openEmailPopup: false ,
+                  openPassword: false,
+                  optionSideMenu:'1',
+                  openSettings: false,
+                  open3: false,
+                  emailAddress: true,
+                  phoneNumber: true,
+                  cl2:true
+                };
+    this.openModalEmailPopup = this.openModalEmailPopup.bind(this)
+    this.closeModalEmailPopup = this.closeModalEmailPopup.bind(this)
+    this.openModalSettings = this.openModalSettings.bind(this)
+    this.closeModalSettings = this.closeModalSettings.bind(this)
+    this.openModalPassword = this.openModalPassword.bind(this)
+    this.closeModalPassword = this.closeModalPassword.bind(this)
     this.openModal3 = this.openModal3.bind(this)
     this.closeModal3 = this.closeModal3.bind(this)
-    this.togglecl1 = this.togglecl1.bind(this)
+    this.toggleEmailPopup = this.toggleEmailPopup.bind(this)
     this.togglecl2 = this.togglecl2.bind(this)
     this.togglecl3 = this.togglecl3.bind(this)
   }
@@ -29,17 +43,23 @@ class Account extends Component {
     this.setState({ country: val });
   }
 
-  openModal1 (){
-    this.setState({ open1: true })
+  openModalEmailPopup (){
+    this.setState({ openEmailPopup: true })
   }
-  closeModal1 () {
-    this.setState({ open1: false })
+  closeModalEmailPopup () {
+    this.setState({ openEmailPopup: false })
   }
-  openModal2 (){
+  openModalPassword (){
     this.setState({ open2: true })
   }
-  closeModal2 () {
+  closeModalPassword () {
     this.setState({ open2: false })
+  }
+  openModalSettings (){
+    this.setState({ openSetting: true })
+  }
+  closeModalSettings () {
+    this.setState({ openSetting: false })
   }
   openModal3 (){
     this.setState({ open3: true })
@@ -47,15 +67,15 @@ class Account extends Component {
   closeModal3 () {
     this.setState({ open3: false })
   }
-  togglecl1 () {
+  toggleEmailPopup () {
     this.setState({
-      cl:false,
-      open1:false
+      emailAddress:false,
+      openEmailPopup:false
      })
    }
   togglecl2 () {
        this.setState({
-         cl1:false,
+         phoneNumber:false,
          open1:false
     })
   }
@@ -79,38 +99,35 @@ class Account extends Component {
        width: "18%",
        padding: "1%"
      };
+     const contentStyleSettings = {
+        width: "60%",
+        height:"100%",
+      };
   return (
     <div className="Account">
     <Nav/>
       <div class="Basic">
-         <div class="Menu">
-           <h3>Account Setting</h3>
-           <p><Link to='/profile' style={{ textDecoration: 'none',color:'black' }}>Profile Setting</Link></p>
-           <p>Payment Settings</p>
-           <p>My Transactions</p>
-           <p>Privacy Setting</p>
-         </div>
+         <Sidemenu option={this.state.optionSideMenu}/>
          <div class="Content">
             <h3>Contact Information</h3>
             <h3 class="Grey-Text">Email address</h3>
-            <div className={this.state.cl?"Profile-Input":"Display-none"}>
-              <p>abcd@mckinley.com</p>
-              <input class="Button" onClick={this.openModal1} type="submit" value="Remove"></input>
-              <Popup
-              contentStyle={contentStyle}
-              open={this.state.open1}
-              closeOnDocumentClick
-               onClose={this.closeModal1}
-              >
-              <Email
-              onCloseModdal={this.closeModal1}
-              onChangeCl={this.togglecl1}
-              />
-              </Popup>
+            <div className={this.state.emailAddress?"Profile-Input":"Display-none"}>
+                <p>abcd@mckinley.com</p>
+                <input class="Button" onClick={this.openModalEmailPopup} type="submit" value="Remove"></input>
+                <Popup
+                  contentStyle={contentStyle}
+                  open={this.state.openEmailPopup}
+                  closeOnDocumentClick
+                  onClose={this.closeModalEmailPopup}>
+                <Email
+                  onCloseModdal={this.closeModalEmailPopup}
+                  onChangeCl={this.toggleEmailPopup}
+                />
+                </Popup>
             </div>
             <h4>Add Email Address</h4>
             <h3 class="Grey-Text">Phone Number</h3>
-            <div className={this.state.cl1?"Profile-Input":"Display-none"}>
+            <div className={this.state.phoneNumber?"Profile-Input":"Display-none"}>
               <p>+91 1234567890</p>
               <input class="Button" onClick={this.openModal1} type="submit" value="Remove"></input>
               <Popup
@@ -128,7 +145,7 @@ class Account extends Component {
             <h4>Add Phone Number</h4>
             <hr></hr>
             <h3>Delivery Address</h3>
-            <h3 className={this.state.cl2?"Grey-Text":"Display-none"}>No delivery addresses listed yet.</h3>
+            <h3 className={this.state.Address?"Grey-Text":"Display-none"}>No delivery addresses listed yet.</h3>
             <h4 onClick={this.openModal3}>Add Delivery Address</h4>
             <Popup
             contentStyle={contentStyle2}
@@ -144,15 +161,15 @@ class Account extends Component {
             <h3>Password</h3>
             <div class="Profile-Input">
               <p>*****************</p>
-              <input class="Button" onClick={this.openModal2} type="submit" value="Change"></input>
+              <input class="Button" onClick={this.openModalPassword} type="submit" value="Change"></input>
               <Popup
                contentStyle={contentStyle1}
-              open={this.state.open2}
+              open={this.state.openPassword}
               closeOnDocumentClick
-               onClose={this.closeModal2}
+               onClose={this.closeModalPassword}
               >
                <Password
-               onCloseModdal2={this.closeModal2}/>
+               onCloseModdal2={this.closeModalPassword}/>
               </Popup>
             </div>
             <hr></hr>
@@ -196,7 +213,16 @@ class Account extends Component {
                  <p>Only important notifications</p>
                </div>
               <div class="Account-Notification-RowThree">
-                  <input class="Button-TypeTwo" type="submit" value="Edit"></input>
+                  <input class="Button-TypeTwo" onClick={this.openModalSettings} type="submit" value="Edit"></input>
+                      <Popup
+                      contentStyle={contentStyleSettings}
+                      open={this.state.openSetting}
+                      closeOnDocumentClick
+                       onClose={this.closeModalSettings}
+                      >
+                      <POPUP/>
+                      </Popup>
+
                   <br></br>
                   <input class="Button-TypeTwo" type="submit" value="Edit"></input>
                   <br></br>

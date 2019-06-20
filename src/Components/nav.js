@@ -1,13 +1,11 @@
 import React from 'react';
-import './nav.css';
-import SearchField from "react-search-field";
-import bell from'../bell.png';
-import message from'../message.png';
-import compass from'../compass.png';
-import refresh from'../refresh.png';
-import user from'../user.png';
+import '../Styles/nav.css';
+import bell from'../assets/bell.png';
+import message from'../assets/message.png';
+import compass from'../assets/compass.png';
+import refresh from'../assets/refresh.png';
+import user from'../assets/user.png';
 import {Link} from 'react-router-dom';
-import {TiUserOutline,TiRefresh,TiCompass,TiBell,TiMessage} from 'react-icons/ti';
 
 function Nav() {
   return (

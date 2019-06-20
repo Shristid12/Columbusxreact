@@ -1,0 +1,32 @@
+.PopUpCardDiv{
+  display: flex;
+  padding-bottom: 0px;
+  margin-bottom: 0;
+}
+.popup{
+  text-align: left;
+  margin-left: 3%;
+}
+.PopupButton{
+  margin-left: auto;
+  font-size: 0.8em;
+  width:80%;
+  margin-top: 4%;
+  text-align: right;
+  margin-right:4%;
+}
+.PopupCardText{
+  margin-top: 0;
+  font-size: 0.8em;
+  padding-top: 0;
+  width:55%;
+}
+.PopUpCardSwitch{
+  margin-left: auto;
+  font-size: 0.8em;
+  margin-right: 4%;
+  margin-top: 3%;
+}
+.popupTextHead{
+  font-weight: bold;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
-import './about.css';
-import Nav from '../Navigation/nav.js';
+import '../Styles/about.css';
+import Nav from '../Components/nav.js';
 import Select from '@material-ui/core/Select';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,8 +10,8 @@ import FilledInput from '@material-ui/core/FilledInput';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
-import Mon from './mon.jpg';
-import Rob from './rob.jpg';
+import Mon from '../assets/mon.jpg';
+import Rob from '../assets/rob.jpg';
 
 const useStyles = makeStyles(theme => ({
   root: {
