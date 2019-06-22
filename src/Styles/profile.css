@@ -12,6 +12,24 @@
 .Profile-Sectiontwo{
   width:80%;
 }
+.Profile-DropDown{
+  width:100%;
+  background: white;
+  border: 1px solid black;
+  height: 30px;
+}
+.Dropdown-Text{
+  font-size: 1.1em;
+  margin-top: 6px;
+  margin-left: 4%;
+}
+.Dropdown-ArrowIcon{
+  height:16px;
+  width:auto;
+  margin-left: auto;
+  margin-top: 6px;
+  margin-right: 6%;
+}
 .Profile-FileSelect{
   width:15%;
   height:120px;
@@ -20,6 +38,25 @@
 }
 .Profile-TextField{
   border:none;
+  width: 100%;
+  height: auto;
+}
+.Profile-CameraIcon{
+  position: relative;
+  bottom:20%;
+  left:76%;
+  margin-left: auto;
+  height: 22px;
+  width:auto;
+}
+.Profile-TextArea{
+  border:none;
+  width: 100%;
+  height: auto;
+}
+.Profile-TextArea:hover{
+  border: lightBlue 2px solid;
+  border-radius: 4px;
   width: 100%;
   height: auto;
 }
@@ -67,4 +104,5 @@
 }
 .Profile-InputForm{
   margin-left: auto;
+  width:15%;
 }

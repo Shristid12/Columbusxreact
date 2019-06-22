@@ -20,8 +20,8 @@ class Inp extends Component {
   render(){
   return (
     <form onSubmit={this.handleSubmit}>
-        <textarea class="Profile-TextField" rows="4" cols="50"
-          style={{fontFamily:'sans-serif' ,fontSize:'1.1em'}} 
+        <textarea class="Profile-TextArea" rows="4" cols="50"
+          style={{fontFamily:'sans-serif' ,fontSize:'1.1em'}}
           value={this.state.value} onChange={this.handleChange}
         />
     </form>

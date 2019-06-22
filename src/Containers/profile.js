@@ -3,20 +3,14 @@ import '../Styles/profile.css';
 import { createMuiTheme, withStyles, makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Popup from 'reactjs-popup';
+import Camera from '../assets/camera.png';
 import AddIcon from '@material-ui/icons/Add';
-import Input from '@material-ui/core/Input';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import FilledInput from '@material-ui/core/FilledInput';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import NativeSelect from '@material-ui/core/NativeSelect';
 import Inp from'../Components/inp.js';
 import Name from'../Components/name.js';
 import {Link} from 'react-router-dom';
 import Nav from '../Components/nav.js';
 import Sidemenu from'../Components/SideMenu.js';
+import Dropdown from '../Components/dropdown.js';
 
 const AddButton = withStyles({
   root: {
@@ -26,26 +20,8 @@ const AddButton = withStyles({
   },
 })(Button);
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-    maxHeight: 30,
-  },
-  selectControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-    maxHeight: 30,
-  },
   ButtonControl: {
     maxHeight: 12,
-  },
-  selectEmpty: {
-    marginTop: theme.spacing(2),
-    height: 40,
   },
 }));
 const contentStyle = {
@@ -61,12 +37,6 @@ function Profile() {
     name: 'hai',
     open1: false,
   });
-
-  const inputLabel = React.useRef(null);
-  const [labelWidth, setLabelWidth] = React.useState(0);
-  React.useEffect(() => {
-    setLabelWidth(inputLabel.current.offsetWidth);
-  }, []);
 
   const handleChange = name => event => {
     setState({
@@ -98,6 +68,7 @@ function Profile() {
             <div class="Profile-SelectImage">
                 <div class="Profile-FileSelect">
                     <input class="Profile-FileInput" type="file"></input>
+                    <img class="Profile-CameraIcon" src={Camera}></img>
                 </div>
               <div class="Profile-Sectiontwo">
                    <h3 class="Grey-Text">Name</h3>
@@ -165,23 +136,7 @@ function Profile() {
                      <p class="Grey-Text">Working as Sr Software Engr.</p>
                  </div>
                  <div class="Profile-InputForm">
-             <FormControl variant="outlined" className={classes.formControl}>
-                 <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
-                 </InputLabel>
-                 <Select
-                    native
-                    value={state.option3}
-                    className={classes.selectControl}
-                    onChange={handleChange('option3')}
-                    input={
-                      <OutlinedInput name="option3" labelWidth={labelWidth} id="outlined-age-native-simple" />
-                    }
-                 >
-                  <option value={0}>Options</option>
-                  <option value={10}>Delete</option>
-                  <option value={20}>Edit</option>
-                 </Select>
-              </FormControl>
+                 <Dropdown/>
                  </div>
               </div>
              <hr></hr>
@@ -203,23 +158,7 @@ function Profile() {
                     <h3>Add School</h3>
                   </div>
                   <div class="Profile-InputForm">
-              <FormControl variant="outlined" className={classes.formControl}>
-                  <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
-                  </InputLabel>
-                  <Select
-                     native
-                     className={classes.selectControl}
-                     value={state.option1}
-                     onChange={handleChange('option1')}
-                     input={
-                       <OutlinedInput name="option1" labelWidth={labelWidth} id="outlined-age-native-simple" />
-                     }
-                  >
-                    <option value={0}>Options</option>
-                    <option value={10}>Delete</option>
-                    <option value={20}>Edit</option>
-                  </Select>
-               </FormControl>
+                 <Dropdown/>
                   </div>
                </div>
                <h3 class="Grey-Text">University</h3>
@@ -232,23 +171,7 @@ function Profile() {
                        <h3>Add University</h3>
                     </div>
                   <div class="Profile-InputForm">
-              <FormControl variant="outlined" className={classes.formControl}>
-                  <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
-                  </InputLabel>
-                  <Select
-                     native
-                     className={classes.selectControl}
-                     value={state.option2}
-                     onChange={handleChange('option2')}
-                     input={
-                       <OutlinedInput name="option2" labelWidth={labelWidth} id="outlined-age-native-simple" />
-                     }
-                  >
-                   <option value={0}>Options</option>
-                   <option value={10}>Delete</option>
-                   <option value={20}>Edit</option>
-                  </Select>
-               </FormControl>
+                  <Dropdown/>
                   </div>
                </div>
              <hr></hr>
