@@ -1,0 +1,119 @@
+.Value{
+   margin-right:8%;
+   margin-left: 8%;
+}
+.ValueSelection{
+  display: flex;
+  margin-top: 3%;
+}
+.Value-SelectionMenu{
+  margin-right: 2%;
+  width:14%;
+  height: 30px;
+  padding-left: 1%;
+}
+.ValueCard{
+  display: flex;
+  width:100%;
+}
+.Text{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.ValueChain-TextCard{
+  display:flex;
+  padding-top: 0;
+  margin-top: 0;
+}
+.valuechaincontract{
+  display: flex;
+}
+.imagecard{
+  display: flex;
+}
+.ValueChainImage{
+  height: 30px;
+  margin-left:60%;
+}
+.ValueChainImageShare{
+  height: 30px;
+}
+.ValueChainText{
+  margin-left: 75%;
+  margin-right: 3%;
+}
+.ValueChain-Text{
+   padding-top: 0px;
+   margin-top: 0px;
+}
+.ValueChainNumber{
+  font-size: 0.8em;
+  text-align: left;
+  width: 100%;
+  margin-top:0;
+  padding-top:0;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin: 5%;
+}
+.valuechainhead{
+  font-weight: bold;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  color: black;
+}
+.valuechainhead2{
+  font-weight: bold;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  color: #ff0067;
+}
+.ValueChainBase{
+  border:1px solid black;
+  margin-top: 3%;
+  padding-left: 4%;
+  padding-right: 4%;
+  background: #f7f8f9;
+  text-align: left;
+}
+.ValueChain-NumberOne{
+  width:27%;
+  background: white;
+  margin-right: 2%;
+  height:220px;
+  margin-bottom: 2%;
+}
+.ValueChain-NumberTwo{
+  width:26%;
+  background: white;
+  margin-right: 2%;
+  height:220px;
+  margin-bottom: 2%;
+}
+.ValueChain-NumberThree{
+  width:43%;
+  background: white;
+  height:220px;
+  margin-bottom: 2%;
+}
+.ValueChain-ImageCard{
+  border:1px dashed black;
+  width:18%;
+  margin-top: 6%;
+  height:53px;
+}
+.ValueChainOne{
+  color:grey;
+  width:100%;
+  padding-left: 6%;
+}
+.ValueChainOneContract{
+  color:grey;
+  width:100%;
+  padding-left: 6%;
+  padding-right:39%;
+}
+.ValueChainTwo{
+  color:grey;
+  width:100%;
+}

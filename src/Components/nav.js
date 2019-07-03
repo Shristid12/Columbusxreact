@@ -7,7 +7,7 @@ import refresh from'../assets/refresh.png';
 import user from'../assets/user.png';
 import {Link} from 'react-router-dom';
 
-function Nav() {
+function Nav(props) {
   return (
     <div className="Nav">
         <div class="Nav-imageBar">
@@ -21,11 +21,11 @@ function Nav() {
           <img src={user} class="Nav-Icons"></img>
           <img src={refresh} class="Nav-Icons"></img>
         </div>
-        <div class="Nav-ContentBar">
+        <div className={props.page=='front'?"Display-none":"Nav-ContentBar"}>
            <p class="Nav-menuItemOne">My Page</p>
            <p class="Nav-menuItem">My Value Chain</p>
-           <p class="Nav-menuItem">Legal Page</p>
-           <Link to='/about' style={{ textDecoration: 'none',color:'black',width:'100%' }}><p class="Nav-menuItem">About Us</p></Link>
+           <p class="Nav-menuItem"><Link to='/legal' style={{ textDecoration: 'none',color:'black' }}>Legal Page</Link></p>
+           <p class="Nav-menuItem"><Link to='/about' style={{ textDecoration: 'none',color:'black' }}>About Us</Link></p>
         </div>
     </div>
   );

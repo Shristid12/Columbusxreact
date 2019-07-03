@@ -1,0 +1,95 @@
+.FrontPage-BlackTab{
+  display: flex;
+  color: white;
+  background: black;
+  height:30px;
+  font-size: 0.9em;
+}
+.FrontPageFilter{
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 2%;
+}
+.Service{
+  width:14%;
+  height:30px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  margin-right: 1%;
+}
+.FrontPage-Selection-left{
+  text-align: left;
+}
+.FrontPage-PinkBar{
+  display: flex;
+  margin-left: 8%;
+  margin-right: 8%;
+  text-align: left;
+  margin-top: 3%;
+  background: linear-gradient(to right, #ff0067, #ff80df);
+}
+.HomePageCard{
+  background: white;
+  padding: 3%;
+  margin: 2%;
+  text-align: left;
+  font-size: 0.9em;
+}
+.BookmarkSection{
+  display: flex;
+}
+.HastagButton{
+  height:28px;
+  width:8%;
+  background: #ebf0fa;
+  margin-top:1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-radius: 100%;
+  margin-left: 1%;
+  border: 1px solid grey;
+}
+.ValueChainImage{
+  width:12%;
+  margin-left:auto;
+}
+.FrontPageCardSection{
+  text-align: center;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+.Front-PageBelowNav{
+  background: #ebf0fa;
+}
+.FrontPage-PinkBarText{
+  color:white;
+  width:50%;
+  margin: 1%;
+}
+.ColumbusXIcon{
+  display: flex;
+  color: #ebf0fa;
+  font-size: 1em;
+  height:100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  width:40%;
+}
+.FrontPage-option{
+  background: white;
+  width:14%;
+  margin-left: 3%;
+  margin-top: 2%;
+  margin: 3%;
+  padding: 1%;
+  border-radius: 3px;
+}
+.Front-Button{
+  background: black;
+  color: white;
+  padding: 1%;
+  border: 1px solid black;
+  margin-right: 3%;
+  border-radius: 4px;
+}

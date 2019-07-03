@@ -10,8 +10,12 @@
     "rc-menu": "^7.4.23",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-dropzone": "^10.1.5",
+    "react-facebook-login": "^4.1.1",
+    "react-fileupload-progress": "^0.5.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-search-field": "^1.0.0",
     "reactjs-popup": "^1.4.1"
   },
   "scripts": {

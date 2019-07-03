@@ -2,26 +2,29 @@ import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import Cross from '../assets/cross.png';
 
 const useStyles = makeStyles(theme => ({
+  textField: {
+     margin: theme.spacing(2),
+     maxHeight: 30,
+     width:"90%",
 
-textField: {
-  marginLeft: theme.spacing(1),
-  marginRight: theme.spacing(1),
-},
+   },
 }));
 
-function Address() {
+function Address(props) {
     const classes = useStyles();
   return (
-    <div className="Password">
+    <div className="Address">
     <div>
-       <div class="Account-Popup">
+       <div class="Address-Popup">
           <h3>Add your Delivery Address</h3>
-          <h3 class="Account-Popup-Cross">x</h3>
-        </div>
+           <img onClick={props.onCloseModdal} src={Cross} class="Account-Popup-Cross"></img>
+       </div>
         <TextField
-          id="outlined-with-placeholder"
+          className={classes.textField}
+          id="dense-with-placeholder"
           label="Full Name"
           placeholder="Full Name"
           margin="normal"
@@ -29,6 +32,7 @@ function Address() {
         />
         <br></br>
         <TextField
+        className={classes.textField}
         id="outlined-with-placeholder"
         label="Street 1"
         placeholder="Street 1"
@@ -37,6 +41,7 @@ function Address() {
         />
         <br></br>
         <TextField
+        className={classes.textField}
         id="outlined-with-placeholder"
         label="Street 2"
         placeholder="Street 2"
@@ -44,6 +49,7 @@ function Address() {
         variant="outlined"
         />
         <TextField
+        className={classes.textField}
         id="outlined-with-placeholder"
         label="Town/City"
         placeholder="Town/City"
@@ -51,6 +57,7 @@ function Address() {
         variant="outlined"
         />
         <TextField
+        className={classes.textField}
         id="outlined-with-placeholder"
         label="Country/Region"
         placeholder="Country/Region"
@@ -58,13 +65,14 @@ function Address() {
         variant="outlined"
         />
         <TextField
+        className={classes.textField}
         id="outlined-with-placeholder"
         label="Postal Code"
         placeholder="Postal Code"
         margin="normal"
         variant="outlined"
         />
-        <div class="uhhh">
+        <div class="Address-PopupButtonSection">
           <input class="Account-Popup-ButtonTwo" type="submit" value="Cancel"></input>
           <input class="Account-Popup-Button" type="submit" value="Save"></input>
         </div>

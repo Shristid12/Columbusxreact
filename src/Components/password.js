@@ -2,12 +2,14 @@ import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import Cross from '../assets/cross.png';
 
 const useStyles = makeStyles(theme => ({
 
 textField: {
-  marginLeft: theme.spacing(1),
-  marginRight: theme.spacing(1),
+  margin: theme.spacing(2),
+  maxHeight: 30,
+  width:"90%",
 },
 }));
 
@@ -16,11 +18,12 @@ function Password(props) {
   return (
     <div className="Password">
     <div>
-       <div class="Account-Popup">
+       <div class="Address-Popup">
           <h3>Change Password</h3>
-          <h3 onClick={props.onCloseModdal2} class="Account-Popup-Cross">x</h3>
+          <img onClick={props.onCloseModdal} src={Cross} class="Account-Popup-Cross"></img>
         </div>
         <TextField
+          className={classes.textField}
           id="outlined-with-placeholder"
           label="Current Password"
           placeholder="Current Password"
@@ -29,6 +32,7 @@ function Password(props) {
         />
         <br></br>
         <TextField
+        className={classes.textField}
         id="outlined-with-placeholder"
         label="New Password"
         placeholder="New Password"
@@ -37,14 +41,15 @@ function Password(props) {
         />
         <br></br>
         <TextField
+        className={classes.textField}
         id="outlined-with-placeholder"
         label="Retype New"
         placeholder="Retype New"
         margin="normal"
         variant="outlined"
         />
-        <div class="uhhh">
-          <input onClick={props.onCloseModdal2} class="Account-Popup-ButtonTwo" type="submit" value="Cancel"></input>
+        <div class="Account-PopupButtonSection">
+          <input onClick={props.onCloseModdal} class="Account-Popup-ButtonTwo" type="submit" value="Cancel"></input>
           <input class="Account-Popup-Button" type="submit" value="Save"></input>
         </div>
     </div>

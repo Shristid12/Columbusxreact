@@ -7,6 +7,18 @@
   border-radius: 50%;
   border: 1px solid grey;
 }
+.paymentcard_image{
+  height:30px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  margin-right: 4%;
+}
+.test-class{
+  width:90%;
+}
+.BankCardText{
+  margin-top: 3%;
+}
 .Grey-Text-2{
   color: grey;
 }

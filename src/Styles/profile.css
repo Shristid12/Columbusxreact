@@ -1,8 +1,9 @@
 .Profile-Disabled-Button{
   color: #f2f2f2;
+  background-color: #c0c0c0;
   border-radius: 4px;
-  height:30px;
-  width: 12%;
+  height:25px;
+  width: 8%;
   margin-left: auto;
 }
 .Profile-SelectMenuOne{
@@ -10,6 +11,7 @@
   padding-left: 2%;
 }
 .Profile-Sectiontwo{
+  padding-top: 0;
   width:80%;
 }
 .Profile-DropDown{
@@ -23,12 +25,46 @@
   margin-top: 6px;
   margin-left: 4%;
 }
+.School-Selection{
+  width:91%;
+  height:30px;
+  margin-left:4%;
+}
 .Dropdown-ArrowIcon{
   height:16px;
   width:auto;
   margin-left: auto;
   margin-top: 6px;
   margin-right: 6%;
+}
+.KycPopup{
+  margin-left: 4%;
+}
+.Kyc-checkBox{
+  display: flex;
+}
+.profile-schoolpopup{
+  margin-right: 6%;
+  margin-left: 4%;
+  margin-top: 4%;
+  display: flex;
+}
+.School-PopupButtonSection{
+  display: flex;
+  margin-left: auto;
+  width:50%;
+}
+.schoolpopup-Textarea{
+  margin-left: 4%;
+  border-radius: 4px;
+}
+.profile-schoolpopup-year{
+  width:44%;
+  height:30px;
+}
+.profile-schoolpopup-text{
+  width:12%;
+  text-align: center;
 }
 .Profile-FileSelect{
   width:15%;
@@ -37,6 +73,7 @@
   margin-right: 4%;
 }
 .Profile-TextField{
+  margin-top: 0;
   border:none;
   width: 100%;
   height: auto;
@@ -73,9 +110,11 @@
   color: white;
   border-radius: 4px;
   border:1px solid black;
-  height:30px;
+  height:25px;
+  font-size: 0.9em;
+  font-weight: lighter;
   margin-left:auto;
-  width:14% ;
+  width:11% ;
 }
 .Profile-SelectMenuTwo{
   width:52%;

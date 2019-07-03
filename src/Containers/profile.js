@@ -11,6 +11,8 @@ import {Link} from 'react-router-dom';
 import Nav from '../Components/nav.js';
 import Sidemenu from'../Components/SideMenu.js';
 import Dropdown from '../Components/dropdown.js';
+import KYC from '../Components/kyc.js';
+import School from '../Components/school.js';
 
 const AddButton = withStyles({
   root: {
@@ -25,10 +27,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 const contentStyle = {
-   width: "15%",
-   padding: "1%"
+   width: "22%",
+   borderRadius: 4,
  };
-
+ const contentStyleKyc = {
+    width: "20%",
+    paddingRight: "1.5%",
+    borderRadius: 4,
+  };
 function Profile() {
   const classes = useStyles();
   const [state, setState] = React.useState({
@@ -36,6 +42,8 @@ function Profile() {
     optionSideMenu:'2',
     name: 'hai',
     open1: false,
+    openSchool: false,
+    open3: false,
   });
 
   const handleChange = name => event => {
@@ -56,6 +64,31 @@ function Profile() {
       [open1]: false,
     });
   };
+  const openModalSchool = openSchool => event => {
+    setState({
+      ...state,
+      [openSchool]: true,
+    });
+  };
+  const closeModalSchool = openSchool => event => {
+    setState({
+      ...state,
+      [openSchool]: false,
+    });
+  };
+  const openModal3 = open3 => event => {
+    setState({
+      ...state,
+      [open3]: true,
+    });
+  };
+  const closeModal3 = open3 => event => {
+    setState({
+      ...state,
+      [open3]: false,
+    });
+  };
+
   return (
     <div className="Home">
       <Nav/>
@@ -73,11 +106,11 @@ function Profile() {
               <div class="Profile-Sectiontwo">
                    <h3 class="Grey-Text">Name</h3>
                    <div class="Profile-Input">
-                      <input class="Profile-TextField" type="text" value="Mr Jon Doe"/>
+                      <p class="Profile-TextField" >Mr Jon Doe</p>
                    </div>
                    <h3 class="Grey-Text">User Name</h3>
                    <div class="Profile-Input">
-                        <input class="Profile-TextField" type="text" value="Mr Jon Doe"/>
+                        <p class="Profile-TextField">Mr Jon Doe</p>
                         <input class="Profile-TextFieldButton" onClick={openModal1('open1')} type="submit" value="Edit"></input>
                         <Popup
                          contentStyle={contentStyle}
@@ -85,7 +118,8 @@ function Profile() {
                          closeOnDocumentClick
                          onClose={closeModal1('open1')}
                         >
-                          <Name/>
+                          <Name
+                          onCloseModdal={closeModal1('open1')}/>
                        </Popup>
                     </div>
                </div>
@@ -93,16 +127,20 @@ function Profile() {
             <hr></hr>
             <h3>KYC Details</h3>
             <h3 class="Grey-Text">Complete your KYC for uninterrupted experience.</h3>
-            <h4>Do KYC Now</h4>
+            <h4 onClick={openModal3('open3')}>Do KYC Now</h4>
+                <Popup
+                 contentStyle={contentStyleKyc}
+                 open={state.open3}
+                 closeOnDocumentClick
+                 onClose={closeModal3('open3')}
+                >
+                  <KYC/>
+               </Popup>
             <hr></hr>
             <h3>Bio</h3>
             <div class="Profile-Input">
                 <Inp/>
-                <div class="Profile-Disabled-Button">
-                  <Button variant="contained" color="disabled">
-                     Save
-                  </Button>
-                </div>
+                  <input class="Profile-Disabled-Button" type="submit" value="Save"></input>
             </div>
             <hr></hr>
             <h3>Work</h3>
@@ -155,7 +193,15 @@ function Profile() {
                     <h4>XYZ School</h4>
                     <p>August 2009 to April 2014, seoul, Koria</p>
                     <p class="Grey-Text">Lorem ipsum</p>
-                    <h3>Add School</h3>
+                    <h3 onClick={openModalSchool('openSchool')}>Add School</h3>
+                    <Popup
+                     contentStyle={contentStyle}
+                     open={state.openSchool}
+                     closeOnDocumentClick
+                     onClose={closeModalSchool('openSchool')}>
+                      <School
+                       onCloseModdal={closeModalSchool('openSchool')}/>
+                   </Popup>
                   </div>
                   <div class="Profile-InputForm">
                  <Dropdown/>
