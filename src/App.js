@@ -1,15 +1,19 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter} from 'react-router-dom';
-import Routes from './routes/routes.js';
-function App() {
-  return (
-    <div className="App">
-    <BrowserRouter>
-        <Routes />
-    </BrowserRouter>
-    </div>
-  );
-}
+import {
+  BrowserRouter as Router, Route, Link, Switch,
+} from 'react-router-dom';
 
+import HomeRoutes from './routes/HomeRoutes';
+import AuthRoutes from './routes/authroutes';
+import Welcome from './Containers/home';
+const App = () => (
+  <Router>
+    <Switch>
+      <Route path="/" component={Welcome} />
+      <Route path="/auth" component={AuthRoutes} />
+      <Route path="/app" component={HomeRoutes} />
+    </Switch>
+  </Router>
+);
 export default App;

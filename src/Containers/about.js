@@ -4,10 +4,6 @@ import Nav from '../Components/nav.js';
 import Select from '@material-ui/core/Select';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import { makeStyles } from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import FilledInput from '@material-ui/core/FilledInput';
-import InputLabel from '@material-ui/core/InputLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Mon from '../assets/mon.jpg';
@@ -39,6 +35,7 @@ function About() {
       age: '',
       name: 'hai',
       language: '',
+      page:'about',
     });
 
     const inputLabel = React.useRef(null);
@@ -58,15 +55,17 @@ function About() {
 
   return (
     <div className="About">
-      <Nav/>
+      <Nav page={state.page}/>
       <div class="Basic">
       <div class="About-Navigation-Menu">
         <h3>About CX</h3>
         <p>Newsroom</p>
-        <p>About Leadership</p>
+        <p>Team</p>
         <p>Investors</p>
-        <p>Events</p>
+        <p>Advisors</p>
         <p>Our Stories</p>
+        <p>Events</p>
+        <p>Testimonials</p>
       </div>
       <div class="Content">
         <div class="About-text">
@@ -89,21 +88,6 @@ function About() {
               <FormHelperText ><b>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,</b></FormHelperText>
          </FormControl>
          </div>
-         <div class="About-Selector-Two">
-          <FormControl className={classes.formControl1}>
-              <NativeSelect
-                 className={classes.selectEmpty}
-                 value={state.language}
-                  name="language"
-                  onChange={handleChange1('language')}
-                 inputProps={{ 'aria-label': 'language' }}
-               >
-                 <option value={10}>English</option>
-                 <option value={20}>Hindi</option>
-                 <option value={30}>French</option>
-               </NativeSelect>
-           </FormControl>
-          </div>
          </div>
          <div class="About-text">
            <div class="About-section">

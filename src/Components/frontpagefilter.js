@@ -12,6 +12,9 @@ function FrontPageFilter(props){
              </select>
              <select class="Service">
                <option>Default Value Chain</option>
+               <option>Create Value Chain</option>
+               <option>Active Value Chain</option>
+               <option>Alternate Value Chain</option>
              </select>
           </div>
           <div class="FrontPage-Selection-right">

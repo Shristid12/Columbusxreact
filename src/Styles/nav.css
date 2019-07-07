@@ -29,7 +29,8 @@
 }
 .Nav-ContentBar{
   display: flex;
-  background: #f2f2f2;
+  background:black;
+  color: white;
   height:30px;
   border-top: 1px solid #C0C0C0;
   border-bottom: 1px solid #C0C0C0;
@@ -38,6 +39,12 @@
    margin-top:2px;
    margin-left: 2%;
    width:9%;
+}
+.pink-test{
+   margin-top:2px;
+   margin-left: 2%;
+   width:9%;
+   color:#ff0067;
 }
 .Nav-menuItemOne{
    margin-top:2px;

@@ -39,6 +39,7 @@ function Legal() {
       age: '',
       name: 'hai',
       language: '',
+      page:'legal',
     });
 
     const inputLabel = React.useRef(null);
@@ -58,7 +59,7 @@ function Legal() {
 
   return (
     <div className="Legal">
-      <Nav/>
+      <Nav page={state.page}/>
       <div class="Basic">
       <div class="About-Navigation-Menu">
         <h3>Terms</h3>
@@ -89,21 +90,7 @@ function Legal() {
               <FormHelperText ><b>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,</b></FormHelperText>
          </FormControl>
          </div>
-         <div class="About-Selector-Two">
-          <FormControl className={classes.formControl1}>
-              <NativeSelect
-                 className={classes.selectEmpty}
-                 value={state.language}
-                  name="language"
-                  onChange={handleChange1('language')}
-                 inputProps={{ 'aria-label': 'language' }}
-               >
-                 <option value={10}>English</option>
-                 <option value={20}>Hindi</option>
-                 <option value={30}>French</option>
-               </NativeSelect>
-           </FormControl>
-          </div>
+
          </div>
          <div class="About-text">
            <div class="About-section">

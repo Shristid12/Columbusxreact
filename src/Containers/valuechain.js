@@ -7,9 +7,13 @@ import ValueChainDetails from'../Components/ValueChainDetails.js';
 import ValueChainContract from'../Components/valuechaincontract.js';
 
 function ValueChain(){
+  const [state, setState] = React.useState({
+    page:'valuechain',
+  });
+
   return (
     <div className="ValueChain">
-        <Nav/>
+        <Nav page={state.page}/>
         <div class="Value">
             <div class="ValueSelection">
                <select class="Value-SelectionMenu">
