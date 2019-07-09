@@ -26,7 +26,7 @@
   margin-right: 8%;
   text-align: left;
   margin-top: 3%;
-  background: linear-gradient(to right, #ff0067, #ff80df);
+  background: linear-gradient(to right,	#FF0749 15%, #E48BE7);
 }
 .HomePageCard{
   background: white;
@@ -41,7 +41,7 @@
 .HastagButton{
   height:28px;
   width:8%;
-  background: #ebf0fa;
+  background: #F4F6F9;
   margin-top:1%;
   padding-left: 1%;
   padding-right: 1%;
@@ -59,7 +59,7 @@
   margin-right: 8%;
 }
 .Front-PageBelowNav{
-  background: #ebf0fa;
+  background: #F4F6F9;
 }
 .FrontPage-PinkBarText{
   color:white;
@@ -68,7 +68,7 @@
 }
 .ColumbusXIcon{
   display: flex;
-  color: #ebf0fa;
+  color:#F4F6F9;
   font-size: 1em;
   height:100%;
   margin-top: 0;
@@ -76,19 +76,26 @@
   padding: 0;
   width:40%;
 }
+.FrontPage-heading{
+  font-family: serif;
+}
+.PinkBar-text{
+  font-size: 0.9em;
+}
 .FrontPage-option{
   background: white;
-  width:14%;
+  width:12%;
   margin-left: 3%;
   margin-top: 2%;
   margin: 3%;
-  padding: 1%;
+  padding: 2%;
+  font-size: 0.9em;
   border-radius: 3px;
 }
 .Front-Button{
   background: black;
   color: white;
-  padding: 1%;
+  padding: 2%;
   border: 1px solid black;
   margin-right: 3%;
   border-radius: 4px;

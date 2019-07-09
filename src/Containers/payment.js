@@ -15,6 +15,7 @@ class Payment extends Component {
       checkedA: true,
       checkedG: true,
       openBank: false,
+      page:'settings',
       option:'3'};
   this.openModalBankPopup = this.openModalBankPopup.bind(this)
   this.closeModalBankPopup = this.closeModalBankPopup.bind(this)
@@ -32,7 +33,7 @@ class Payment extends Component {
      };
   return (
     <div className="Payment">
-    <Nav/>
+    <Nav page={this.state.page}/>
       <div class="Basic">
          <div class="Menu">
            <SideMenu option={this.state.option}/>

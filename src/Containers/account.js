@@ -5,7 +5,6 @@ import Popup from 'reactjs-popup';
 import Password from '../Components/password.js';
 import Email from '../Components/email.js';
 import Address from '../Components/address.js';
-import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Nav from '../Components/nav.js';
@@ -18,6 +17,7 @@ class Account extends Component {
     super(props);
     this.state = { country: '',
                   region: '' ,
+                  page:'settings',
                   openEmailPopup: false ,
                   openphonePopup: false ,
                   openAddressPopup: false,
@@ -117,7 +117,7 @@ class Account extends Component {
       };
   return (
     <div className="Account">
-    <Nav/>
+    <Nav page={this.state.page}/>
       <div class="Basic">
         <div class="Menu">
            <Sidemenu option={this.state.optionSideMenu}/>
@@ -235,7 +235,6 @@ class Account extends Component {
                       >
                       <POPUP/>
                       </Popup>
-
                   <br></br>
                   <input class="Button-TypeTwo" type="submit" value="Edit"></input>
                   <br></br>

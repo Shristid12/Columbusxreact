@@ -48,6 +48,11 @@
 }
 .Nav-menuItemOne{
    margin-top:2px;
-   padding-left: 6%;
+   padding-left: 8%;
+   width:6%;
+}
+.Nav-menuItemFirst{
+   margin-top:2px;
+   padding-left: 8%;
    width:10%;
 }

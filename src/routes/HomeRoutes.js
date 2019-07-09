@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Nav from '../Components/nav';
 import Account from '../Containers/account.js';
 import Profile from '../Containers/profile.js';
 import About from '../Containers/about.js';
@@ -20,7 +19,6 @@ export default class HomeRouter extends Component {
     const { match } = this.props;
     return (
       <React.Fragment>
-        <Nav />
         <Switch>
           <Route path={`${match.url}/account`} component={Account} />
           <Route path={`${match.url}/profile`} component={Profile} />

@@ -41,6 +41,7 @@ function Profile() {
     option: '',
     optionSideMenu:'2',
     name: 'hai',
+    page:'settings',
     open1: false,
     openSchool: false,
     open3: false,
@@ -91,7 +92,7 @@ function Profile() {
 
   return (
     <div className="Home">
-      <Nav/>
+      <Nav page={state.page}/>
       <div class="Basic">
          <div class="Menu">
             <Sidemenu option={state.optionSideMenu}/>

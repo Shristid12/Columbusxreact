@@ -10,7 +10,6 @@ import Welcome from './Containers/home';
 const App = () => (
   <Router>
     <Switch>
-      <Route path="/" component={Welcome} />
       <Route path="/auth" component={AuthRoutes} />
       <Route path="/app" component={HomeRoutes} />
     </Switch>

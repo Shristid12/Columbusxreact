@@ -10,17 +10,9 @@ import Mon from '../assets/mon.jpg';
 import Rob from '../assets/rob.jpg';
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
   formControl: {
     margin: theme.spacing(1),
     minWidth: '50%',
-  },
-  formControl1: {
-    margin: theme.spacing(1),
-    minWidth: '100%',
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -33,8 +25,6 @@ function About() {
   const classes = useStyles();
     const [state, setState] = React.useState({
       age: '',
-      name: 'hai',
-      language: '',
       page:'about',
     });
 
@@ -46,12 +36,7 @@ function About() {
         [name]: event.target.value,
       });
     };
-    const handleChange1 = name => event => {
-      setState({
-        ...state,
-        [name]: event.target.value,
-      });
-    };
+
 
   return (
     <div className="About">

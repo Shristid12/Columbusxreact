@@ -26,31 +26,30 @@ function FrontPage(){
      <Nav page={state.page}/>
       <div class="Front-PageBelowNav">
          <div class="FrontPage-BlackTab">
-           <p class="Nav-menuItemOne">Market Entry</p>
+           <p class="Nav-menuItemFirst">Market Entry</p>
            <p class="Nav-menuItem">Outsourcing</p>
            <p class="Nav-menuItem">Investments</p>
          </div>
          <div class="FrontPage-PinkBar">
             <div class="FrontPage-option">
-              <p>The platform</p>
+              <p><b>The Platform</b></p>
               <p>The Value Chain</p>
               <p>cX Legal Support</p>
               <p>cX Support</p>
               <p>Opportunities</p>
             </div>
             <div class="FrontPage-PinkBarText">
-              <h1>Post Project & We<br>
+              <h1 class="FrontPage-heading">Post Project & We<br>
               </br>Help you expand your Business.</h1>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-              sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna
-              Read More</p>
+              <p class="PinkBar-text">Lorem ipsum dolor sit amet, consetetur sadipscing <br></br>
+              elitr,sed diam nonumy eirmod tempor
+              invidunt ut <br></br>labore et dolore magna
+              <br></br>Read More.</p>
               <input class="Front-Button" type="submit" value="Post Project"></input>
-              <input class="Front-Button" type="submit" value="Find Project"></input>
+              <input class="Front-Button" type="submit" value="Browse Projects"></input>
             </div>
             <div class="ColumbusXIcon">
-               <h1 class="C">C</h1>
-               <h1 class="X">X</h1>
+
             </div>
          </div>
          <FrontPageFilter/>

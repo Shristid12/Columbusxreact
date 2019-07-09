@@ -12,13 +12,13 @@ class Sidemenu extends Component{
   return (
     <div className="Account">
        <div>
-           <p onClick={()=>this.setState({option:'1'})}><Link to='/account' style={{ textDecoration: 'none',color:'black' }}
+           <p onClick={()=>this.setState({option:'1'})}><Link to='/app/account' style={{ textDecoration: 'none',color:'black' }}
               className={this.state.option=='1'?"SidemenuNotClicked":"Clicked"}>
                Account Setting</Link></p>
-           <p onClick={()=>this.setState({option:'2'})}><Link to='/profile' style={{ textDecoration: 'none',color:'black' }}
+           <p onClick={()=>this.setState({option:'2'})}><Link to='/app/profile' style={{ textDecoration: 'none',color:'black' }}
               className={this.state.option=='2'?"SidemenuNotClicked":"Clicked"}>
                Profile Setting</Link></p>
-           <p onClick={()=>this.setState({option:'3'})}><Link to='/payment' style={{ textDecoration: 'none',color:'black' }}
+           <p onClick={()=>this.setState({option:'3'})}><Link to='/app/payment' style={{ textDecoration: 'none',color:'black' }}
               className={this.state.option=='3'?"SidemenuNotClicked":"Clicked"}>
                Payment Settings</Link></p>
            <p>My Transactions</p>

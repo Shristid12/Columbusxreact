@@ -28,7 +28,8 @@ function Nav(props) {
   return (
     <div className="Nav">
         <div class="Nav-imageBar">
-          <h2 class="Nav-logo">columbusX</h2>
+          <h2 class="Nav-logo"><Link to='/app/front'
+          style={{textDecoration: 'none',color:'white'}}>columbusX</Link></h2>
           <div class="Nav-Search">
             <input class="Nav-SearchArea" type="text" placeholder="Search"></input>
           </div>
@@ -45,14 +46,16 @@ function Nav(props) {
           <img src={refresh} class="Nav-Icons"></img>
         </div>
         <div className={props.page=='front'?"Display-none":"Nav-ContentBar"}>
-           <p className={props.page=='page'?"pink-test":"Nav-menuItemOne"}>Settings</p>
-           <p className="Nav-menuItem"><Link to='/valuechain'
+           <p className="Nav-menuItemOne"><Link to='/app/account'
+           style={props.page=='settings'?{ textDecoration: 'none',color:'#ff0067'}:{ textDecoration: 'none',color:'white'}}
+           className={props.page=='settings'?"pink-text":"Nav-menuItemOne"}>Settings</Link></p>
+           <p className="Nav-menuItem"><Link to='/app/valuechain'
            style={props.page=='valuechain'?{ textDecoration: 'none',color:'#ff0067'}:{ textDecoration: 'none',color:'white'}}
            className={props.page=='valuechain'?"pink-text":"Nav-menuItem"}>My Value Chain</Link></p>
-           <p class="Nav-menuItem"><Link to='/legal'
+           <p class="Nav-menuItem"><Link to='/app/legal'
            style={props.page=='legal'?{ textDecoration: 'none',color:'#ff0067'}:{ textDecoration: 'none',color:'white'}}
            className={props.page=='legal'?"pink-text":"Nav-menuItem"}>Legal Page</Link></p>
-           <p className={props.page=='about'?"pink-test":"Nav-menuItem"}><Link to='/about'
+           <p className={props.page=='about'?"pink-test":"Nav-menuItem"}><Link to='/app/about'
             style={props.page=='about'?{ textDecoration: 'none',color:'#ff0067'}:{ textDecoration: 'none',color:'white'}}>About Us
             </Link></p>
         </div>
