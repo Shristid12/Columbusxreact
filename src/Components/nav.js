@@ -8,6 +8,7 @@ import user from'../assets/user.png';
 import {Link} from 'react-router-dom';
 import UserPopup from './UserPopup.js';
 import ToolTip from 'react-portal-tooltip';
+import POPUP from '../Components/popup.js';
 
 function Nav(props) {
   const [state, setState] = React.useState({

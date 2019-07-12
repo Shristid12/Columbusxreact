@@ -8,6 +8,8 @@ import Legal from '../Containers/legal.js';
 import Payment from'../Containers/payment.js';
 import ValueChain from '../Containers/valuechain.js';
 import Front from'../Containers/FrontPage.js';
+import Contact from '../Containers/Contact.js';
+import Project from '../Containers/Project.js';
 
 export default class HomeRouter extends Component {
   constructor(props) {
@@ -27,6 +29,8 @@ export default class HomeRouter extends Component {
           <Route path={`${match.url}/payment`} component={Payment} />
           <Route path={`${match.url}/valueChain`} component={ValueChain} />
           <Route path={`${match.url}/front`} component={Front} />
+          <Route path={`${match.url}/contact`} component={Contact} />
+          <Route path={`${match.url}/project`} component={Project} />
         </Switch>
       </React.Fragment>
     );

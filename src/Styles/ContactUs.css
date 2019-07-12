@@ -1,0 +1,118 @@
+.ConatctUs-Section{
+  display: flex;
+}
+.ContactUs{
+  margin:5%;
+}
+.Content-Contact{
+  border:1px solid #C0C0C0;
+  box-shadow: 0px 0px 4px 0px #c0c0c0;
+  width:64%;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 1%;
+  padding-bottom: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 15%;
+  font-size: 0.8em;
+}
+.invisible{
+  opacity:1;
+  width:5%;
+  margin-left: 2%;
+}
+.invisibleClip{
+  opacity:0;
+  width:5%;
+  margin-left: 2%;
+  position: absolute;
+  left:8%
+}
+.invisibleCamera{
+  opacity:0;
+  width:5%;
+  margin-left: 2%;
+  position: absolute;
+  left:16%;
+}
+.ContactUs-Select{
+  width:40%;
+  margin-left: auto;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.message-options{
+  height:17px;
+  padding: 1%;
+}
+.ContactUs-Button{
+   padding-left: 2%;
+   margin-left: auto;
+   height:30px;
+   background: #c0c0c0;
+   color: white;
+   margin-left: 10%;
+   margin-top: 3%;
+   width:24%;
+   border: 1px solid #c0c0c0;
+   border-radius: 5px;
+}
+.ContactUs-Recommended{
+  margin-top: 0;
+  padding-top: 0;
+}
+hr{
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+.Contact-Popup{
+  margin-left: auto;
+  margin-right: 1%;
+}
+.Contact-Popup-Cross{
+  margin-left: auto;
+  margin-top: 5%;
+  height:10px;
+}
+.Contact-Popup-Dots{
+  margin-top: 6%;
+  height:20px;
+}
+.Grey-Text-Message{
+  font-size: 0.9em;
+  color: #c0c0c0;
+}
+.Message-From-Cx{
+  width:65%;
+}
+.CX-MessageBox{
+  border:1px solid grey;
+  padding: 3%;
+  border-radius: 4px;
+}
+.MessageUs{
+  padding: 2%;
+}
+.Message-From-User{
+  width:55%;
+  margin-left: auto;
+}
+.User-MessageBox{
+  background: #c0c0c0;
+  padding: 3%;
+  border:1px solid #c0c0c0;
+  border-radius: 4px;
+}
+.Fix-at-Bottom{
+  position: fixed;
+  bottom: 14%;
+  width:20%;
+}
+.Message-TextBox{
+  width:100%;
+  height:30px;
+  border-radius: 4px;
+  border:1px solid #c0c0c0;
+  padding: 2%;
+}

@@ -19,14 +19,14 @@ function FrontPageFilter(props){
           </div>
           <div class="FrontPage-Selection-right">
           </div>
-          <hr></hr>
+          <hr class="Frontpage-HastagLine"></hr>
           <div class="BookmarkSection">
              <p>Refined by:</p>
              {[0, 1, 2,4,5,6,7,8,9,10].map(value => (
                 <input class="HastagButton" type="submit" value="Hashtag"></input>
              ))}
           </div>
-          <hr></hr>
+          <hr class="Frontpage-HastagLine"></hr>
        </div>
     </div>
   );
